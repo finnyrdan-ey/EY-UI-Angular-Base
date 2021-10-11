@@ -1,0 +1,59 @@
+{
+
+    "path": "src/app",
+    "Folderstructure": [
+        {
+            "ModuleName": {
+                "Name": "app",
+                "ModuleCreation": false,
+                "Routing":true,
+                "Component": [
+                    {
+                        "Name": "app/ForgetPassword"
+                    },
+                    {
+                        "Name": "ForgetUserName"
+                    },
+                    {
+                        "Name": "app/ForgetPassword"
+
+                    },
+                    {
+                        "Name": "app/Finny/raju"
+
+                    }
+                ]
+            },
+            "ModuleName": {
+                "Name": "Pre-Login",
+                "ModuleCreation": true,
+                "Routing":true,
+                "Component": [
+                    {
+                        "Name": "app/ForgetPassword"
+                    },
+                    {
+                        "Name": "ForgetUserName"
+                    }
+                ]
+            }
+        },
+        {
+            "ModuleName": {
+                "Name": "Post-Login",
+                "Routing":false,
+                "Component": [
+                    {
+                        "Name": "ForgetPassword"
+                    },
+                    {
+                        "Name": "ForgetUserName"
+                    }
+                ]
+            }
+        }
+    ]
+}
+
+
+
