@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LogoutComponent } from './logout/logout.component';
+import { SeessionClearComponent } from './logout/seession-clear/seession-clear.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LogoutComponent,
+    SeessionClearComponent
   ],
   imports: [
     BrowserModule,

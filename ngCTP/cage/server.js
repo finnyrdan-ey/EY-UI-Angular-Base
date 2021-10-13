@@ -1,30 +1,45 @@
-const data = require('./config.json');
+const data = require("./config.json");
+const process = require("process");
+const fileSystem = require("fs");
+const excludeExtensions = [".ts", ".css", ".html"];
+getAutocomponentGenerate = function () {
+  if (data != null) {
+    //Path Setting logic
+    let applicationPath = process.cwd() + "\\" + data.path;
+   
+    fileSystem.readdir(applicationPath, function (error, files) {
+        let tempArray = [];
+        files.map((item) => {
+                let a =item.match(/\.[0-9a-z]+$/i);
+                if(a==null){
+                    tempArray.push(item);
+                }
+        });
+        console.log(tempArray);
+    });
+   
+    //Path setting logic end
+    if (
+      data["Folderstructure"] != undefined &&
+      data["Folderstructure"] != null
+    ) {
+      //ng g c finny
+      data["Folderstructure"].forEach(
+        // if(){
+        //1-if  node modeule then module
+        //2-module component
+        ///3-module and compoent it will skip
 
-getAutocomponentGenerate =function (){
-
-    if(data !=null){
-        console.log(data.path);
-        if(data["Folderstructure"] != undefined && data["Folderstructure"] !=null){
-                //ng g c finny
-            data["Folderstructure"].forEach(
-                // if(){
-                        //1-if  node modeule then module
-                        //2-module component
-                        ///3-module and compoent it will skip
-
-                // }
-                //createModule command
-                element => console.log(element)
-                //
-                )
-        }
-       
-        
+        // }
+        //createModule command
+        (element) => console.log(element)
+        //
+      );
     }
-}
+  }
+};
 getAutocomponentGenerate();
 //module.exports =data;
-
 
 // Algorithim
 //get a node function that gives a details of existing fil directory
