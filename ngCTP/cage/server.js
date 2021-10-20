@@ -8,13 +8,12 @@ getAutocomponentGenerate = function () {
     let applicationPath = process.cwd() + "\\" + data.path;
    
     fileSystem.readdir(applicationPath, function (error, files) {
-        let tempArray = [];
-        files.map((item) => {
-                let a =item.match(/\.[0-9a-z]+$/i);
-                if(a==null){
-                    tempArray.push(item);
-                }
-        });
+      if(files.length > 0){
+        let  tempArray =files.filter(function(item){
+          return !(item.match(/\.[0-9a-z]+$/i));
+      });
+      console.log(tempArray);
+      }
         console.log(tempArray);
     });
    
