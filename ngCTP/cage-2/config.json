@@ -1,0 +1,13 @@
+{
+    "projectName": "sampleProj",
+    "style": "scss",
+    "components": [
+        {
+            "componentName": "Component1",
+            "child": [
+                {
+                "componentName": "childComp1"
+            }]
+        }
+    ]
+}
