@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Charts</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" [(opened)]="opened">
+    <mat-nav-list>
+      <mat-list-item>
+        <a routerlink="/ngChart">
+          NgChart
+        </a>
+      </mat-list-item>
+      <mat-list-item>Chart 2</mat-list-item>
+      <mat-list-item>Chart 3</mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
